@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')  %>
+</head>
+<body>
+    <nav>
+        <a href="/productos"> Volver </a>
+    </nav>
+    <form action="/productos/actualizar?m=PUT" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<%= product.id %>">
+        <fieldset>
+            <legend>Nombre de producto</legend>
+            <input type="text" name="name" id="name" value="<%= product.name %>">
+        </fieldset>
+        <fieldset>
+            <legend>precio de producto</legend>
+            <input type="text" name="price" id="price" value="<%= product.price %>">
+        </fieldset>
+        <fieldset>
+            <legend>Categoria de producto</legend>
+            <input type="radio" name="category" id="category-cat" value="cat" <%= product.category == 'cat' ? "checked": "" %>>
+            <label for="category-cat">Cat</label>
+            <input type="radio" name="category" id="category-dog" value="dog" <%= product.category == 'dog' ? "checked": "" %>>
+            <label for="category-dog">Dog</label>
+            <input type="radio" name="category" id="category-fish" value="fish" <%= product.category == 'fish' ? "checked": "" %>>
+            <label for="category-fish">Fish</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Archivos</legend>
+            <input type="file" name="imagen" id="imagen">
+            <label for="imagen">Subir imagen</label>
+        </fieldset>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

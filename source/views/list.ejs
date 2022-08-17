@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <% if (products.length > 0) { %>
+        <ul>
+            <% products.forEach(element => { %> 
+                <%- include('./partials/products.ejs',{element:element})  %> 
+            <% }) %>
+        </ul>
+    <% } else { %>
+         <h2> 
+            No hay productos
+         </h2>
+    <% } %>
+    <a href="/productos/nuevo"><button type="button"> Nuevo</button></a>
+</body>
+</html>

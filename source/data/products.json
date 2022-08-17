@@ -1,0 +1,40 @@
+[
+  {
+    "name": "One",
+    "category": "cat",
+    "price": 1000,
+    "id": 1
+  },
+  {
+    "name": "Two",
+    "category": "cat",
+    "price": 2000,
+    "id": 2
+  },
+  {
+    "name": "Three",
+    "category": "dog",
+    "price": 3000,
+    "id": 3
+  },
+  {
+    "name": "cat yoda",
+    "price": 4000,
+    "category": "fish",
+    "id": 4
+  },
+  {
+    "name": "doge",
+    "price": 100000,
+    "category": "dog",
+    "id": 5,
+    "image": "imagen-1660005734287-160369877.png"
+  },
+  {
+    "name": "testeo img ",
+    "price": 9000,
+    "category": "dog",
+    "id": 6,
+    "image": "imagen-1660006294709-826813951.png"
+  }
+]

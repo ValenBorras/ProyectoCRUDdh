@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <nav>
+        <a href="/productos"> Volver </a>
+    </nav>
+    <% if (product) { %>
+        <article>
+            <picture>
+                <img src="/products/<%= product.image %> " alt="">
+            </picture>
+            <h2> <%= product.name %> <span>$ <%= product.price %></span></h2>
+            <nav>
+                <a href="/productos/<%= product.category %>">
+                    <%= product.category %>
+                </a>
+                <a href="/productos/editar/<%= product.id %>">Editar</a>
+            </nav>
+            <form action="/productos/borrar?m=DELETE" method="post">
+                <input type="hidden" name="id" value="<%= product.id %> ">
+                <button type="submit">Borrar</button>
+            </form>
+        </article>
+        <% } else { %>
+         <h2> 
+            No hay productos <a href="/productos">Volver</a>
+         </h2>
+    <% } %>
+</body>
+</html>
